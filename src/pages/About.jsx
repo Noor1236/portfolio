@@ -137,12 +137,12 @@ const About = () => {
               {
                 title: "Personal Portfolio",
                 description: "Responsive React + Tailwind portfolio to showcase skills, projects, and resume.",
-                link: "/projects/portfolio",
+                link: "/projects",
               },
               {
                 title: "QuizHawk – Quiz Platform",
                 description: "Laravel app with timed MCQs, leaderboard, and roles for admin/users.",
-                link: "/projects/quizhawk",
+                link: "/projects",
               },
             ].map((proj, idx) => (
               <div
