@@ -25,8 +25,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     { to: '/about', text: 'About' },
     { to: '/projects', text: 'Projects' },
     { to: '/certifications', text: 'Certifications' },
-    { to: '/contact', text: 'Contact' },
     { to: '/experience', text: 'Experience' },
+    { to: '/services', text: 'Services' },
+    { to: '/contact', text: 'Contact' },
+
     // { to: '/blog', text: 'Blog' },
   ];
 

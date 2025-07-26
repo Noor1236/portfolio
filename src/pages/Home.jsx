@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import gif from '../assets/git.gif';
 import { Typewriter } from 'react-simple-typewriter';
 import Button from '../components/Button';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaWordpress, FaChalkboardTeacher } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiMysql } from 'react-icons/si';
 import resumeFile from '../assets/noor_cv.pdf';
+
+
 const name = "Noor Fatima";
 
 const container = {
@@ -62,7 +64,7 @@ const Home = () => {
                                 words={[
                                     'MERN Stack Developer 💻',
                                     'Software Engineer 🧠',
-                                    'Creative Problem Solver 🧩',
+                                    'Problem Solver 🧩',
                                 ]}
                                 loop
                                 cursor
@@ -110,8 +112,58 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Skills Section */}
+            {/* What I Do / Services Section */}
             <section className="py-20 px-6 md:px-12 ">
+                <h2 className="text-3xl font-bold text-center text-[#800000] dark:text-rose-400 mb-12">
+                    Services I Offer
+                </h2>
+
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+                    {[{
+                        icon: <FaReact className="text-cyan-500 text-4xl mb-4" />,
+                        title: 'MERN Stack Development',
+                        description:
+                            'Building full-stack applications using MongoDB, Express, React, and Node.js for scalable, modern web experiences.',
+                    },
+                    {
+                        icon: <FaWordpress className="text-blue-600 text-4xl mb-4" />,
+                        title: 'WordPress Development',
+                        description:
+                            'Creating dynamic WordPress websites with custom themes, plugins, and eCommerce using WooCommerce.',
+                    },
+                    {
+                        icon: <FaChalkboardTeacher className="text-yellow-500 text-4xl mb-4" />,
+                        title: 'Mentorship & Teaching',
+                        description:
+                            'If you want to learn web development, I’ll teach you step-by-step — frontend, backend, and full-stack!',
+                    },
+                    ].map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition-all text-center"
+                        >
+                            <div className="flex justify-center">{item.icon}</div>
+                            <h3 className="text-xl font-semibold text-[#800000] dark:text-rose-400 mb-2">
+                                {item.title}
+                            </h3>
+                            <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <div className="mt-12 text-center">
+                    <Button to="/services">Explore Services →</Button>
+                </div>
+            </section>
+
+
+
+            {/* Skills Section */}
+            <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-white to-rose-50 dark:from-gray-900 dark:to-gray-950">
                 <h2 className="text-3xl font-bold text-center text-[#800000] dark:text-rose-400 mb-12">
                     Skills
                 </h2>
@@ -148,7 +200,7 @@ const Home = () => {
 
 
             {/* Projects */}
-            <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-white to-rose-50 dark:bg-gradient-to-r dark:from-gray-950 dark:to-gray-950">
+            <section className="py-20 px-6 md:px-12 ">
                 <h2 className="text-3xl font-bold text-center text-[#800000] dark:text-rose-400 mb-12">
                     Projects
                 </h2>
@@ -200,7 +252,7 @@ const Home = () => {
             </section>
 
             {/* Experience Section */}
-            <section className="py-20 px-6 md:px-12">
+            <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-white to-rose-50 dark:bg-gradient-to-r dark:from-gray-950 dark:to-gray-950">
                 <h2 className="text-3xl font-bold text-center text-[#800000] dark:text-rose-400 mb-12">
                     Experience
                 </h2>
@@ -221,7 +273,7 @@ const Home = () => {
                             description:
                                 'Completed a remote internship using the MERN stack. Built real-time features under mentor guidance and collaborated on full-stack web app modules.',
                         },
-                       
+
                     ].map((exp, index) => (
                         <motion.div
                             key={index}
@@ -248,7 +300,7 @@ const Home = () => {
 
 
             {/* Contact Section */}
-            <section className="py-16 text-center bg-gradient-to-r from-white to-rose-50 dark:from-gray-950 dark:to-gray-950 ">
+            <section className="py-16 text-center ">
                 <h2 className="text-3xl font-bold text-[#800000] dark:text-rose-400 mb-4">
                     Have a project in mind?
                 </h2>
