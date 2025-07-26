@@ -199,8 +199,56 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Experience Section */}
+            <section className="py-20 px-6 md:px-12">
+                <h2 className="text-3xl font-bold text-center text-[#800000] dark:text-rose-400 mb-12">
+                    Experience
+                </h2>
+
+                <div className="space-y-8 max-w-5xl mx-auto">
+                    {[
+                        {
+                            role: 'MERN Stack Developer',
+                            company: 'Fiverr',
+                            duration: 'Present',
+                            description:
+                                'Offered web development services specializing in responsive design, frontend (HTML, CSS, React), and backend (Node.js, Express, MongoDB). Helped clients optimize web apps for performance.',
+                        },
+                        {
+                            role: 'Full Stack Developer',
+                            company: 'DevelopersHub Corporation',
+                            duration: 'Mar 2025 – May 2025',
+                            description:
+                                'Completed a remote internship using the MERN stack. Built real-time features under mentor guidance and collaborated on full-stack web app modules.',
+                        },
+                       
+                    ].map((exp, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1, duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition border-l-4 border-rose-200 dark:border-rose-600 pl-6 relative"
+                        >
+                            <span className="absolute left-[-10px] top-6 w-4 h-4 bg-[#800000] dark:bg-rose-400 rounded-full shadow-md"></span>
+                            <h3 className="text-xl font-semibold text-[#800000] dark:text-rose-400">
+                                {exp.role} <span className="text-gray-500 dark:text-gray-400">@ {exp.company}</span>
+                            </h3>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">{exp.duration}</p>
+                            <p className="mt-2 text-gray-700 dark:text-gray-300">{exp.description}</p>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <div className="mt-12 text-center">
+                    <Button to="/experience">See Full Experience →</Button>
+                </div>
+            </section>
+
+
             {/* Contact Section */}
-            <section className="py-16 text-center ">
+            <section className="py-16 text-center bg-gradient-to-r from-white to-rose-50 dark:from-gray-950 dark:to-gray-950 ">
                 <h2 className="text-3xl font-bold text-[#800000] dark:text-rose-400 mb-4">
                     Have a project in mind?
                 </h2>

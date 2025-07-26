@@ -26,7 +26,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     { to: '/projects', text: 'Projects' },
     { to: '/certifications', text: 'Certifications' },
     { to: '/contact', text: 'Contact' },
-    { to: '/blog', text: 'Blog' },
+    { to: '/experience', text: 'Experience' },
+    // { to: '/blog', text: 'Blog' },
   ];
 
   return (
