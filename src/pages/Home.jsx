@@ -216,7 +216,7 @@ const Home = () => {
                             title: "Maritime Education & Job Portal (FYP)",
                             description:
                                 "A full-stack MERN system for maritime institutions and students, featuring course management, certifications, job listings, and application tracking.",
-                            link: "/projects",
+                            link: "/projects/final-year-project",
                         },
                         {
                             title: "QuizHawk – Online Quiz Platform",

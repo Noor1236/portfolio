@@ -2,32 +2,54 @@ import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import profilePic from '../assets/mine.jpg'; // replace with your profile image path
 import { Link } from 'react-router-dom';
-import {
-  SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiJquery, SiMysql,
-  SiPhp, SiLaravel, SiWordpress, SiReact, SiNodedotjs, SiExpress,
-  SiMongodb, SiGithub, SiVercel, SiPostman,
-} from "react-icons/si";
+// import {
+//   SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiJquery, SiMysql,
+//   SiPhp, SiLaravel, SiWordpress, SiReact, SiNodedotjs, SiExpress,
+//   SiMongodb, SiGithub, SiVercel, SiPostman,
+// } from "react-icons/si";
 import resumeFile from '../assets/noor_cv.pdf';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaWordpress, FaChalkboardTeacher, FaPhp, FaLaravel } from "react-icons/fa";
+import { SiExpress, SiMongodb, SiMysql, SiPostman, SiVite, SiVercel, SiNetlify } from "react-icons/si";
 
-const skills = [
-  { name: "HTML", icon: <SiHtml5 /> },
-  { name: "CSS", icon: <SiCss3 /> },
-  { name: "JavaScript", icon: <SiJavascript /> },
-  { name: "Bootstrap", icon: <SiBootstrap /> },
-  { name: "Jquery", icon: <SiJquery /> },
-  { name: "MySQL", icon: <SiMysql /> },
-  { name: "PHP", icon: <SiPhp /> },
-  { name: "Laravel", icon: <SiLaravel /> },
-  { name: "WordPress", icon: <SiWordpress /> },
-  { name: "React Js", icon: <SiReact /> },
-  { name: "Node Js", icon: <SiNodedotjs /> },
-  { name: "Express Js", icon: <SiExpress /> },
-  { name: "MongoDB", icon: <SiMongodb /> },
-  { name: "GitHub", icon: <SiGithub /> },
-  { name: "Vercel", icon: <SiVercel /> },
-  { name: "Postman", icon: <SiPostman /> },
-  // { name: "Java", icon: <SiJava /> },
-];
+const skills = {
+  Frontend: [
+    { name: "HTML", icon: <FaHtml5 className="text-orange-600 text-3xl mb-2" /> },
+    { name: "CSS", icon: <FaCss3Alt className="text-blue-600 text-3xl mb-2" /> },
+    {
+      name: "Tailwind CSS", icon: <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+        alt="Tailwind"
+        className="w-8 h-8 mb-2"
+      />
+    },
+    { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-3xl mb-2" /> },
+    { name: "React.js", icon: <FaReact className="text-cyan-400 text-3xl mb-2" /> },
+    { name: "Vite", icon: <SiVite className="text-purple-400 text-3xl mb-2" /> },
+  ],
+  Backend: [
+    { name: "Node.js", icon: <FaNodeJs className="text-green-600 text-3xl mb-2" /> },
+    { name: "Express.js", icon: <SiExpress className="text-gray-500 dark:text-gray-300 text-3xl mb-2" /> },
+    { name: "PHP", icon: <FaPhp className="text-indigo-700 text-3xl mb-2" /> },
+    { name: "Laravel", icon: <FaLaravel className="text-red-600 text-3xl mb-2" /> },
+
+  ],
+  Database: [
+    { name: "MongoDB", icon: <SiMongodb className="text-green-500 text-3xl mb-2" /> },
+    { name: "MySQL", icon: <SiMysql className="text-blue-700 text-3xl mb-2" /> },
+  ],
+  // Languages: [
+  //   { name: "C", icon: <span className="text-blue-500 text-xl font-bold mb-2">C</span> },
+  //   { name: "C++", icon: <span className="text-purple-600 text-xl font-bold mb-2">C++</span> },
+  //   { name: "Python", icon: <span className="text-yellow-600 text-xl font-bold mb-2">Py</span> },
+  // ],
+  Tools: [
+    { name: "Git", icon: <FaGitAlt className="text-red-500 text-3xl mb-2" /> },
+    { name: "GitHub", icon: <FaGithub className="text-white dark:text-gray-200 text-3xl mb-2" /> },
+    { name: "Postman", icon: <SiPostman className="text-orange-500 text-3xl mb-2" /> },
+    { name: "Vercel", icon: <SiVercel className="text-black text-3xl mb-2" /> },
+    { name: "Netlify", icon: <SiNetlify className="text-black text-3xl mb-2" /> },
+  ],
+};
 
 const About = () => {
   return (
@@ -126,6 +148,12 @@ const About = () => {
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Built with secure authentication (JWT), RESTful APIs, and a scalable architecture hosted on AWS/Azure.
             </p>
+            <Link
+              to="/projects/final-year-project"
+              className="inline-block mt-4 text-[#800000] dark:text-rose-400 hover:underline hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-rose-600 hover:to-pink-500 transition-all duration-300"
+            >
+              View Details →
+            </Link>
           </div>
         </div>
 
@@ -168,19 +196,47 @@ const About = () => {
 
         {/* Skills Section */}
         <div>
-          <h2 className="text-2xl font-semibold text-center text-[#800000] dark:text-rose-400 mb-6">🧠 Skills</h2>
+          {/* <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-white to-rose-50 dark:from-gray-900 dark:to-gray-950"> */}
+          <h2 className="text-3xl font-bold text-center text-[#800000] dark:text-rose-400 mb-12">
+            My Technical Skills
+          </h2>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2 bg-white dark:bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-gray-800 dark:text-white shadow hover:scale-105 transition"
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto">
+            {Object.entries(skills).map(([category, items], i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.2, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-t-4 border-rose-300 dark:border-rose-500"
               >
-                <span className="text-lg">{skill.icon}</span>
-                <span>{skill.name}</span>
-              </div>
+                <h3 className="text-xl font-bold text-[#800000] dark:text-rose-300 mb-4 text-center">
+                  {category}
+                </h3>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {items.map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      className="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg text-center shadow hover:scale-105 transition-all"
+                    >
+                      <div className="flex justify-center mb-1">{skill.icon}</div>
+                      <div className="text-sm font-medium text-gray-800 dark:text-gray-200">{skill.name}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             ))}
           </div>
+          {/* 
+                <div className="mt-12 text-center">
+                    <Button to="/about">Learn More About Me →</Button>
+                </div>
+            </section> */}
         </div>
 
         {/* short philosophy or motto about your work ethic or goals */}
@@ -192,7 +248,7 @@ const About = () => {
         {/* Certifications */}
         <div className="mt-12">
           <h2 className="text-2xl font-semibold text-center text-[#800000] dark:text-rose-400 mb-8">
-            🏆 Courses & Certifications 
+            🏆 Courses & Certifications
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">

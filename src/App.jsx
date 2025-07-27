@@ -9,6 +9,7 @@ import Certifications from './pages/Certifications';
 import Layout from './components/Layout';
 import Experience from './pages/Experience';
 import Services from './pages/Services';
+import FinalYearProject from './pages/FinalYearProject ';
 
 function App() {
   // const [darkMode, setDarkMode] = useState(false);
@@ -34,6 +35,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/projects/final-year-project" element={<FinalYearProject />} />
+
         </Route>
       </Routes>
     // </div>

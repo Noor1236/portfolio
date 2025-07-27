@@ -7,15 +7,15 @@ const projects = [
     stack: ["React.js", "Tailwind CSS"],
     description:
       "A fully responsive personal portfolio website built with React.js and Tailwind CSS. It features smooth animations, dark mode, project highlights, skills, certifications, and a downloadable resume to professionally showcase my developer profile.",
-    code: "#",
-    live: "#",
+    code: "https://github.com/Noor1236/portfolio",
+    live: "https://mine-portfolio-phi.vercel.app/",
   },
   {
     title: "HooBook – Hotel Booking Platform",
     stack: ["React.js", "Tailwind CSS"],
     description:
       "A fully responsive hotel booking web app built with React.js and Tailwind CSS. Features hotel search, filtering, detailed hotel pages, booking forms, and user dashboards. Integrated admin panel for hotel management with React Router and Context API.",
-    code: "#",
+    code: "https://github.com/Noor1236/hoobook",
     live: "https://hoobook.vercel.app/",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     stack: ["React.js", "JavaScript"],
     description:
       "A sleek, responsive e-commerce platform for a fictional shoe brand. Built with React.js, HTML, and CSS. Includes dynamic product listing, filtering, shopping cart, and a component-based architecture.",
-    code: "#",
+    code: "https://github.com/Noor1236/e-commerce-website",
     live: "https://e-commerce-shoe-website-mu.vercel.app/",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     stack: ["HTML", "Tailwind CSS", "JavaScript"],
     description:
       "A pixel-perfect, responsive clone of Microsoft’s homepage. Developed using HTML, Tailwind CSS, and JavaScript with dark mode toggle and interactive UI.",
-    code: "#",
+    code: "https://github.com/Noor1236/microsoft_clone",
     live: "https://microsoft-clone-lemon.vercel.app/",
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     stack: ["React", "Bootstrap", "NewsAPI"],
     description:
       "A real-time news portal using React, Bootstrap, and NewsAPI. Features live news updates, category filtering, and a dark mode toggle for better user experience.",
-    code: "#",
+    code: "https://github.com/Noor1236/news",
     live: "https://news-kappa-fawn.vercel.app/",
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     stack: ["HTML", "CSS", "Flexbox"],
     description:
       "A visually appealing, responsive travel agency landing page built with HTML and CSS using Flexbox and CSS Grid. Features travel packages, testimonials, and contact form.",
-    code: "#",
+    code: "https://github.com/Noor1236/Wonderlust-Adventures",
     live: "https://wonderlust-adventures.vercel.app/",
   },
   {
@@ -55,7 +55,7 @@ const projects = [
     stack: ["React", "CSS", "JavaScript"],
     description:
       "A responsive React web app built for Internship Pakistan. Designed with an intuitive UI, optimized performance, and mobile-friendly layout.",
-    code: "#",
+    code: "https://github.com/Noor1236/internship_pakistan",
     live: "https://internship-pakistan.vercel.app/",
   },
   {
@@ -63,8 +63,8 @@ const projects = [
     stack: ["Node.js", "Express.js", "MySQL"],
     description:
       "Backend for a web-based maritime education & job portal using Node.js, Express, and MySQL. Built RESTful APIs, managed databases, and ensured secure, scalable architecture.",
-    code: "#",
-    live: "#",
+    code: "",
+    live: "/projects/final-year-project",
   },
   {
     title: "Chatbot Web Application",
@@ -87,8 +87,8 @@ const projects = [
     stack: ["Laravel"],
     description:
       "A Laravel-powered quiz platform with roles for admin and users. Includes MCQs, timers, scoring, and leaderboard functionality.",
-    code: "#",
-    live: "#",
+    code: "",
+    live: "",
   },
   {
     title: "To-do App",
@@ -96,15 +96,15 @@ const projects = [
     description:
       "A clean Laravel app to manage daily tasks. Features include CRUD operations, user-friendly UI, and responsive layout.",
     code: "https://github.com/Noor1236/CodeClauseInternship_To-do-App",
-    live: "#",
+    live: "",
   },
   {
     title: "Chrome Extensions",
     stack: ["JavaScript", "HTML", "CSS"],
     description:
       "Built and deployed two Chrome extensions using JavaScript. One for basic calculations, the other for email scraping within web pages.",
-    code: "#",
-    live: "#",
+    code: "",
+    live: "",
   },
 ];
 
