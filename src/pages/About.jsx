@@ -72,10 +72,11 @@ const About = () => {
             src={profilePic}
             alt="Noor Fatima"
             loading="lazy"
-            className="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-[#800000]"
+            className="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-[#800000] pointer-events-none select-none"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
+            draggable={false}
           />
 
           <motion.p
